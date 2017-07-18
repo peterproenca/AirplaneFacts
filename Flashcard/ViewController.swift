@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  Flashcards
-//
+//         
 //  Created by iD Student on 5/5/17.
 //  Copyright © 2017 iD Tech. All rights reserved.
 //
@@ -10,12 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet weak var questionTextView: UITextView!
-    
-    @IBOutlet weak var answerPickerView: UIPickerView!
-    
     @IBOutlet weak var questionLabel: UILabel!
-    
+    @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var answerPickerView: UIPickerView!
+        
     override func     viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,7 +50,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     // Pickerview delegates
     // returns text of option at a given row.
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return CardCollection.instance.currentCard.options.[row]
+        return CardCollection.instance.currentCard.options[row];
     }
 }
 
